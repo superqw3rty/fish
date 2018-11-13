@@ -1,0 +1,24 @@
+@mixin reset {
+	margin: 0;
+	padding: 0;	
+}
+
+@mixin list-style {
+	list-style: none;
+	@include reset;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }  
+}

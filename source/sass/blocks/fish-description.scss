@@ -1,0 +1,400 @@
+.fish-description {
+	margin: 0 auto;
+	padding: 0 10px;
+	margin-bottom: 43px;
+}
+
+.fish-description__items-wrapper {
+	display: flex;
+	margin-bottom: 70px;
+}
+
+.fish-description__item {
+	min-width: 272px;
+	min-height: 214px;
+	width: 272px;
+	height: 214px;
+
+	box-sizing: border-box;
+	margin: 0 auto;
+	background: white;
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	padding: 2px 17.4px;
+	position: relative;
+	display: none;
+}
+
+.fish-description__item--width {
+	display: none;
+}
+
+.fish-description__item::before {
+	content: "";
+	position: absolute;
+	left: -28px;
+	top: -50px;
+	font-family: 'Segoe UI Black';
+	line-height: normal;
+	font-size: 95px;
+	color: #01E1FF;
+	z-index: -100;
+}
+
+.fish-description__item {
+	&--1::before {
+		content: "1";
+	}
+	&--2::before {
+		content: "2";
+	}
+	&--3::before {
+		content: "3";
+	}
+	&--4::before {
+		content: "4";
+	}
+}
+
+.fish-description__item::after {
+	content: "";
+	position: absolute;
+	width: 48.1px;
+	height: 36.52px;
+	right: 4px;
+	top: 166px;
+	background: url(../img/fish.svg);
+	opacity: 0.15;	
+}
+
+.fish-description__item:hover::after {
+	opacity: 0.5;
+}
+
+.fish-description__description-header {
+	font-family: 'Segoe UI Regular';
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 500;
+	color: #000000;
+	margin-bottom: 26px;
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 182.44px;
+		height: 1px;
+		left: 0px;
+		top: 25px;
+		background: black;
+	}
+}
+
+.fish-description__description {
+	font-family: 'Segoe UI Light';
+	line-height: normal;
+	font-size: 14px;
+	color: #000000
+}
+
+.fish-description__label {
+	position: absolute;
+	top: 104px;
+	opacity: 0.5;
+	&--prev {
+		background-image: url(../img/left-arrow.svg);
+		left: -29px;
+		width: 15px;
+		height: 25px;
+		cursor: pointer;
+	}
+	&--next {
+		background-image: url(../img/right-arrow.svg);
+		right: -29px;
+		width: 15px;
+		height: 25px;
+		cursor: pointer;
+	}
+	&:hover {
+		opacity: 1;
+	}
+	&:active {
+		opacity: 0.3;
+	}
+}
+
+.fish-description__input {
+	display: none;
+}
+
+.fish-description__input:checked + .fish-description__item {
+	display: block;
+}
+
+.fish-description__any-text {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	font-size: 14px;
+	text-align: right;
+	text-transform: uppercase;
+	margin-right: 4px;
+	position: relative;
+	
+	&--bold {
+		font-weight: 700;
+	}
+	&::before {
+		content: "";		
+		position: absolute;
+		background-image: url(../img/fishes.svg);
+		width: 39px;
+		height: 39px;
+		left: 5px;
+		top: -5px;
+		transition: transform 1s;
+	}
+	&:hover::before {
+		transform: rotate(360deg);
+	}
+}
+
+@media (min-width: 1800px) {
+	.fish-description {
+		@include reset;
+		margin-bottom: 36px;
+	}
+	.fish-description__width-wrapper {
+		width: 73%;
+		margin: 0 auto;
+		margin-bottom: 201px;
+
+		::-webkit-scrollbar {
+		    height: 6px;
+		    width: 100%;
+		    background: #01E1FF;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+		   	width: 1px;
+		    height: 10px;
+		    background: #C8C8C8;
+		   
+		}
+		 
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			width: 114px;
+		    height: 6px;
+		    background: #01E1FF; 
+		}
+	}
+	
+	.fish-description__items-wrapper {
+		margin: 0 auto;	
+		height: 100%;
+		overflow-y: hidden;
+		position: relative;
+	}
+
+	.fish-description__item {
+		display: block;
+		width: 328px;
+		min-width: 328px;
+		margin-top: 224px;
+		margin-bottom: 100px;
+		margin-right: 111px;
+		padding: 2px 20.8px;
+		height: 163px;
+		min-height: 163px;
+		box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+		overflow: hidden;
+		/*&--1,
+
+		&--2,
+		 {
+			height: 163px;
+			min-height: 163px;
+			max-height: 163px;
+		}*/
+		&--1 {
+			margin-left: 10px;
+			height: 180px;
+			min-height: 180px;
+		}
+		&--3,
+		&--4 {
+			height: 167px;
+			min-height: 167px;
+			max-height: 167px;
+		}
+	}
+
+	.fish-description__item--width {
+		display: block;
+	}
+
+	.fish-description__item {
+		&::before {
+			font-size: 96px;
+			top: -104px;
+			left: 1px;
+		}
+	}
+		
+	.fish-description__description-header {
+			font-family: 'Segoe UI';
+			line-height: normal;
+			font-size: 18px;
+			&::after {
+			content: none;
+			}
+		}
+
+	.fish-description__description {
+		font-family: 'Segoe UI Regular';
+		line-height: normal;
+		font-size: 14px;
+		padding-right: 21px;
+	}
+
+	.fish-description__input:checked + .fish-description__item {
+	
+		//transform: translateX(-439px);
+	}
+
+	.fish-description__item {
+		&::after {
+			content: "";
+			position: absolute;
+			opacity: 0.5;	
+		}
+		&--1::after {
+			background: url(../img/fish@desktop.svg);
+			width: 58px;
+			height: 44px;
+			right: 4px;
+			top: 128px;
+		}
+		&--2::after {
+			background: url(../img/fish-jump@desktop.svg);		
+			width: 66px;
+			height: 66px;
+			right: 1px;
+			top: 96px;
+		}
+		&--3::after {
+			background: url(../img/fish-whale@desktop.svg);		
+			width: 69px;
+			height: 69px;
+			top: 111px;
+			right: -11px;
+		}
+		&--width::after {
+			background: url(../img/fish@desktop.svg);
+			width: 58px;
+			height: 44px;
+			right: 4px;
+			top: 118px;
+		}
+	}
+
+	.fish-description__item:hover::after {
+		opacity: 1;
+	}
+
+	.fish-description__label-forward {
+		position: absolute;
+		width: 42px;
+		height: 78px;
+		top: 274px;
+		background-image: url(../img/right-arrow@desktop.svg);
+		cursor: pointer;
+		&--1 {
+			left: 374px;
+		}
+		&--2 {
+			left: 813px;
+		}
+		&--3 {
+			left: 1252px;
+		}
+		&--4 {
+			left: 1691px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: -154px;
+			left: -364px;
+			font-family: 'Segoe UI Black';
+			line-height: normal;
+			color: #01E1FF;
+			font-size: 96px;
+			z-index: -111;
+		}
+		&--1::before {
+			content: "1";
+		}
+		&--2::before {
+			content: "2";
+		}
+		&--3::before {
+			content: "3";
+		}
+		&--4::before {
+			content: "4";
+		}
+	}
+	
+	.fish-description__scroll-wrapper {
+		overflow: hidden;
+		height: 6px;
+		width: 100%;
+	}
+	.fish-description__scroll {
+		width: 100%;
+		height: 1px;
+		background: #C8C8C8;
+		position: relative;
+	}
+
+	.fish-description-thumb {
+		width: 114px;
+	    height: 6px;
+	    background: #01E1FF; 
+	    position: absolute;
+	    top: -5px;
+	}
+	
+	.fish-description__any-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		font-family: 'Open Sans';
+		font-size: 14px;
+		line-height: 19px;
+		font-weight: 400;
+		text-align: right;
+		margin-right: 150px;
+		&--bold {
+			font-weight: bold;
+		}
+		&::before {
+			content: "";		
+			position: absolute;
+			background-image: url(../img/fishes-big.svg);
+			background-repeat: no-repeat;
+			width: 62px;
+			height: 62px;
+			left: 150px;
+			top: -28px;
+			transition: transform 1s;
+		}
+	}	
+}
+
+	
+

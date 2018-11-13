@@ -1,0 +1,80 @@
+@font-face {
+    font-family:'Roboto Regular';
+    src: url('../fonts/roboto-regular.woff2') format('woff2'),
+		url('../fonts/roboto-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family:'Roboto Bold';
+    src: url('../fonts/roboto-bold.woff2') format('woff2'),
+		url('../fonts/roboto-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+font-family: 'Segoe UI Light';
+src: url('../fonts/segoeui-light.woff2') format('woff2'),
+url('../fonts/segoeui-light.woff') format('woff');
+font-weight: 300;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Segoe UI Regular';
+src: url('../fonts/segoeui-regular.woff2') format('woff2'),
+url('../fonts/segoeui-regular.woff') format('woff');
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Segoe UI Black';
+src: url('../fonts/segoeui-black.woff2') format('woff2'),
+url('../fonts/segoeui-black.woff') format('woff');
+font-weight: 900;
+font-style: normal;
+}
+
+
+body {
+	width: 360px;
+	height: 100%;
+	font-family: 'Roboto Regular', sans-serif;
+	font-size: 14px;
+	background: #ffffff;
+	margin: 0 auto;
+}
+
+.body-overflow {
+    overflow: hidden;
+    margin: 0 auto;
+ //   margin-right: calc(100vw - 62.62%);
+ padding-right: 17px;
+}
+
+ul {
+    @include list-style;
+}
+
+.visually-hidden {
+    @include visually-hidden;
+}
+
+@media (min-width: 1800px) {
+    body {
+        width: 1920px;
+        max-width: 1920px;
+        overflow-x: hidden;
+    }
+
+    .body-overflow {
+        overflow: hidden;
+//        margin-right: calc(100vw - 99%);
+        padding-right: 24px;
+    }
+}
