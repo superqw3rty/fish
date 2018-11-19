@@ -5,7 +5,7 @@
 }
 
 .fish-description__items-wrapper {
-	display: flex;
+	display: block;
 	margin-bottom: 70px;
 }
 
@@ -166,34 +166,36 @@
 		margin-bottom: 36px;
 	}
 	.fish-description__width-wrapper {
-		width: 73%;
+		width: 1380px;
 		margin: 0 auto;
 		margin-bottom: 201px;
-
+		position: relative;
+		overflow: auto;
+/*		
 		::-webkit-scrollbar {
 		    height: 6px;
 		    width: 100%;
 		    background: #01E1FF;
 		}
 
-		/* Track */
 		::-webkit-scrollbar-track {
 		   	width: 1px;
 		    height: 10px;
 		    background: #C8C8C8;
 		   
 		}
-		 
-		/* Handle */
+
 		::-webkit-scrollbar-thumb {
 			width: 114px;
 		    height: 6px;
 		    background: #01E1FF; 
-		}
+		} 
+*/
 	}
 	
 	.fish-description__items-wrapper {
 		margin: 0 auto;	
+		display: flex;
 		height: 100%;
 		overflow-y: hidden;
 		position: relative;

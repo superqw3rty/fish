@@ -7,6 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/perfect-scrollbar.css">
 </head>
 
 <body>
@@ -126,10 +127,10 @@
 				<label for="fish-description-1" class="fish-description__label-forward fish-description__label-forward--4"></label>
 
 			</div>
-			<div class="fish-description__scroll-wrapper">
+			<!--<div class="fish-description__scroll-wrapper">
 				<div class="fish-description__scroll">
 					<div class="fish-description-thumb"></div>
-				</div>
+				</div>-->
 			</div>
 		</div>
 			<p class="fish-description__any-text">тут<br><span class="fish-description__any-text--bold">любой&nbsp;текст</span></p>
@@ -232,6 +233,9 @@
 
 <a href="test.html">TEST</a>
 <script src="js/script.js"></script>
-
+<script src="js/perfect-scrollbar.js"></script>
+	<script defer="">
+		const ps = new PerfectScrollbar('.fish-description__items-wrapper');
+	</script>
 </body>
 </html>
