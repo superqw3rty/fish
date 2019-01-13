@@ -79,9 +79,9 @@
 			<h2 class="main__header">Экономическое значение и угрозы</h2>
 			<p class="main__description">В экономическом отношении значительную роль играет рыболовный промысел. Другой отраслью является торговля декоративными рыбами. </p>
 		</div>
-		<section class="fish-description  div">
-			<div class="fish-description__width-wrapper" id="cusstomScroll">
-			<div class="fish-description__items-wrapper">
+		<section class="fish-description">
+			<div class="fish-description__width-wrapper">
+			<div class="fish-description__items-wrapper dragscroll">
 				<input type="radio" id="fish-description-1" name="fish-description" class="fish-description__input" checked>
 				<div class="fish-description__item fish-description__item--1">
 					<h2 class="fish-description__description-header">Покров</h2>
@@ -234,8 +234,8 @@
 <a href="test.html">TEST</a>
 <script src="js/script.js"></script>
 <script src="js/perfect-scrollbar.js"></script>
-
-	<script defer="">
+<script src="js/dragscroll.js"></script>
+	<script>
 		const ps = new PerfectScrollbar('.fish-description__items-wrapper');
 	</script>
 </body>

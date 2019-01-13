@@ -1,41 +1,46 @@
 var menu_open = document.querySelector(".main-header__nav-burger");
 var menu_close = document.querySelector(".main-header__nav-cross");
 var header = document.querySelector(".main-header__heading");
-var body = document.body;
+var page = document.body;
+
+
+///          SCROLLBAR WIDTH
+
+  	var div = document.createElement('div');
+
+	div.style.overflowY = 'scroll';
+	div.style.width = '500px';
+	div.style.height = '500px';
+	div.style.visibility = 'hidden';
+
+	document.body.appendChild(div);
+	var scrollWidth = div.offsetWidth - div.clientWidth;
+	document.body.removeChild(div);
+
+
+///			MENU
 
 	menu_open.addEventListener("click", function (evt) {
 			header.classList.add("main-header__heading--opened");
-			body.classList.add("body-overflow");
+			page.classList.add("body-overflow");
+			page.style.paddingRight = scrollWidth+'px';
+			page.style.overflow = 'hidden';
 	});
 
 	menu_close.addEventListener("click", function (evt) {
 			header.classList.remove("main-header__heading--opened");
-			body.classList.remove("body-overflow");
+			page.classList.remove("body-overflow");
+			page.style.paddingRight = 0+'px';
+			page.style.overflow = 'auto';
 	});
 
 
 
-/*var list = document.querySelectorAll(".main-header__nav-item");
-list.forEach(function(node) {
-	node.addEventListener("click", function (evt) {
-			node.querySelectorAll("ul").forEach(function(ul) {
-				ul.classList.add("main-header__sub-nav--opened");
-			})
-	});
-})*/
+		var forwardBtn = document.querySelector('.fish-description__label-forward');
+		var container = document.querySelector('.fish-description__items-wrapper');
 
-document.ready=function (){
-if(document.body.scrollHeight<=document.documentElement.clientHeight){
-document.body.style.position='absolute';
-document.body.style.width=document.documentElement.clientWidth+17 + 'px';
-document.body.style.left=-17 + 'px';
-}
-}
-window.onresize=function (){
-if(document.body.scrollHeight<=document.documentElement.clientHeight){
-document.body.style.position='absolute';
-document.body.style.width=document.documentElement.clientWidth+17 + 'px';
-document.body.style.left=-17 + 'px';
-}
-}
+
+
+
+
 
